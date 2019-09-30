@@ -1,4 +1,4 @@
-## About Php Image Cropper
+## About miniCropper
 
 this is a simple solution to cropping images using php and javascript.
 
