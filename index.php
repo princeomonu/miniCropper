@@ -1,3 +1,4 @@
+<?php include 'crop.php'; ?>
 <!doctype html>
 <html>
 <head>
@@ -24,8 +25,9 @@
     <div class="container">
         
         <div class="wrap">
-            <form id="form1" runat="server">
-                <input type='file' id="imgInp" name="fileToUpload" onchange="shwimg()"/>
+            <form class="form" id="form1" runat="server">
+                <img src="<?=@$croppedUrl?>" alt="croppedUrl"><br>  
+                <input class="form-control" type='file' id="imgInp" name="fileToUpload" onchange="shwimg()"/>
             </form>
         </div>        
         <div class="modalbg" id="mbox">
@@ -40,7 +42,7 @@
                         </center>
                     </div>
                     <center>
-            <form action="crop.php" method="post" onsubmit="return checkCoords();">
+            <form action="index.php" method="post" onsubmit="return checkCoords();">
             <input type="hidden" id="x" name="x" />
             <input type="hidden" id="y" name="y" />
             <input type="hidden" id="w" name="w" />
@@ -53,9 +55,6 @@
                 </div>
             </div>
         </div>
-
-        
-        
         
     </div>
 </body>
